@@ -13,6 +13,11 @@ const appointmentSchema = new Schema(
             trim: true,
             match: /.+\@.+\..+/
         },
+        phone: {
+            type: String,
+            required: true,
+            match: /^[0-9]*$/
+        },
         date: {
             type: Date,
             required: true
