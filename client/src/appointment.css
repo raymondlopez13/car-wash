@@ -5,3 +5,12 @@
 .react-calendar {
     width: 100% !important;
 }
+.App-time-btn {
+    font-size:  35px;
+    margin-top: 30px;
+}
+.App-times-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

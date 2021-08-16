@@ -1,0 +1,22 @@
+import React, {useEffect, useState} from 'react';
+
+
+function AppointmentTimes(props) {
+    const times = props.props.map(time => {
+        if(time === 8 || time === 9 || time === 10 || time === 11) {
+            return time = `${time}am`;
+        } else {
+            return time = `${time}pm`;
+        }
+    });
+
+    return (
+        <div className='App-times-container'>
+            {times.map(time => (
+                <button className='App-time-btn'>{time}</button>
+            ))}
+        </div>
+    );
+}
+
+export default AppointmentTimes;
