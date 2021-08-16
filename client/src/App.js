@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import Nav from './components/Nav';
-import About from './components/About';
-import { FaInstagramSquare } from 'react-icons/fa';
+import Home from './pages/Home';
+import Appointment from './pages/Appointment';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const api = axios.create({
   baseURL: `http://localhost:3001/api`
@@ -14,18 +16,13 @@ function App() {
     })
   }
   return (
-    <div>
+    <Router>
       <Nav />
-      <div className="grid">
-        <div className="insta-container">
-          <a href="#"><FaInstagramSquare className="insta"/></a>
-        </div>
-        <div className='Book-btn-container'>
-          <button className='Book-btn'><a href='#'>Book Now</a></button>
-        </div>
-        <About />
-      </div>
-    </div>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/appointment' component={Appointment} />
+      </Switch>
+    </Router>
   );
 }
 

@@ -12,13 +12,14 @@ router.route('/')
             })
     })
     .post((req,res) => {
-        Appointment.create(req.body)
-            .then(app => {
-                res.json(app)
-            })
-            .catch(error => {
-                res.json(error);
-            });
+        Appointment.find(req.body).then(app => {
+            if(!app[0]) {
+                res.json('Not Found')
+            } else {
+                res.json(app);
+            }
+        });
+        
     });
 router.route('/:id')
     .delete((req,res) => {

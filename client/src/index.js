@@ -5,6 +5,7 @@ import './nav.css';
 import './button.css';
 import './about.css';
 import './grid.css';
+import './appointment.css';
 
 
 ReactDOM.render(
