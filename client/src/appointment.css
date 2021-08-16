@@ -1,0 +1,7 @@
+.App-container {
+    max-width: 1024px;
+    margin: 10px auto;
+}
+.react-calendar {
+    width: 100% !important;
+}

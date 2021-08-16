@@ -8,8 +8,11 @@ nav {
     background-image: linear-gradient(to right, black, rgb(0, 0, 0), gray);
 }
 .Nav-heading{
-    color: white;
     padding: 10px;
     margin: 0;
     font-size: 3em;
+}
+.Nav-heading a {
+    text-decoration: none;
+    color: white;
 }
