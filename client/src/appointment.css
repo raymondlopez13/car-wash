@@ -14,3 +14,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.App-time-btn a {
+    text-decoration: none;
+    color: white;
+}

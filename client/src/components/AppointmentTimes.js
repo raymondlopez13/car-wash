@@ -9,11 +9,15 @@ function AppointmentTimes(props) {
             return time = `${time}pm`;
         }
     });
-
+    const month = props.month + 1;
+    const date = props.date;
+    const year = props.year;
+    const fullDate = `${month}/${date}/${year}`;
+    console.log(fullDate);
     return (
         <div className='App-times-container'>
             {times.map(time => (
-                <button className='App-time-btn'>{time}</button>
+                <button key={time} className='App-time-btn'><a href={`/booking?time=${time}&date=${fullDate}`}>{time}</a></button>
             ))}
         </div>
     );

@@ -40,8 +40,8 @@ function Appointment() {
       });
       setAppTimes(appointmentTimes);
     });
-    
   }, [value]);
+  console.log(value);
   //disables weekends
   const disabledDates = [7, 5, 6];
   function tileDisabled({ date, view }) {
@@ -66,7 +66,7 @@ function Appointment() {
         defaultValue={minDate}
         tileDisabled = {tileDisabled}
       />
-      <AppointmentTimes props={appTimes} />
+      <AppointmentTimes props={appTimes} month={value.getMonth()} date={value.getDate()} year={value.getFullYear()}/>
     </div>
   );
 }
