@@ -1,0 +1,16 @@
+button {
+    background-color: rgb(142, 142, 200);
+    border: none;
+    padding: 8px;
+}
+.Book-btn-container {
+    text-align: center;
+    margin: 15px;
+}
+.Book-btn {
+    font-size: 35px;
+}
+.Book-btn a {
+    text-decoration: none;
+    color: white;
+}
