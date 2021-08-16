@@ -4,6 +4,7 @@ import App from './App';
 import './nav.css';
 import './button.css';
 import './about.css';
+import './grid.css';
 
 
 ReactDOM.render(

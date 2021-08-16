@@ -16,13 +16,15 @@ function App() {
   return (
     <div>
       <Nav />
-      <div className="insta-container">
-        <a href="#"><FaInstagramSquare className="insta"/></a>
+      <div className="grid">
+        <div className="insta-container">
+          <a href="#"><FaInstagramSquare className="insta"/></a>
+        </div>
+        <div className='Book-btn-container'>
+          <button className='Book-btn'><a href='#'>Book Now</a></button>
+        </div>
+        <About />
       </div>
-      <div className='Book-btn-container'>
-        <button className='Book-btn'><a href='#'>Book Now</a></button>
-      </div>
-      <About />
     </div>
   );
 }

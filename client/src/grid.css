@@ -1,0 +1,27 @@
+@media screen and (min-width: 769px) {
+    body {
+        background-color: burlywood;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 50px auto;
+        grid-template-areas: 
+            "insta about"
+            "book about";
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: white;
+    }
+    .Book-btn-container {
+        grid-area: book;
+    }
+    .insta-container {
+        grid-area: insta;
+    }
+    .About-container {
+        grid-area: about;
+        margin: 0 20px;
+        border-left: 3px solid black;
+    }
+}

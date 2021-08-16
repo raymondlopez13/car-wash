@@ -3,9 +3,9 @@ body, html {
     padding: 0;
 }
 nav {
-    background-color: black;
     text-align: center;
     margin: 0;
+    background-image: linear-gradient(to right, black, rgb(0, 0, 0), gray);
 }
 .Nav-heading{
     color: white;
