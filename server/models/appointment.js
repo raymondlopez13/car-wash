@@ -19,7 +19,7 @@ const appointmentSchema = new Schema(
             match: /^[0-9]*$/
         },
         date: {
-            type: Date,
+            type: String,
             required: true
         },
         time: {

@@ -14,7 +14,9 @@ router.route('/')
     .post((req,res) => {
         Appointment.find(req.body).then(app => {
             if(!app[0]) {
-                res.json('Not Found')
+                Appointment.create(req.body).then(data => {
+                    res.json(data);
+                })
             } else {
                 res.json(app);
             }
