@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Nav from './components/Nav';
 
 const api = axios.create({
   baseURL: `http://localhost:3001/api`
@@ -12,10 +13,7 @@ function App() {
   }
   return (
     <div>
-      <button onClick={getData}>
-        Car Wash
-      </button>
-      
+      <Nav />
     </div>
   );
 }
