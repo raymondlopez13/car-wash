@@ -1,8 +1,14 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
 
-function PayPal() {
+const api = axios.create({
+    baseURL: `http://localhost:3001/api`
+  });
+
+function PayPal(props) {
+    const [success, setSuccess] = useState(false);
     const paypal = useRef()
-    
+    console.log(props.reqBody);
     useEffect(() => {
         window.paypal.Buttons({
             createOrder: (data, actions, err) => {
@@ -22,18 +28,19 @@ function PayPal() {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
                 console.log(order);
+                api.post('/', props.reqBody).then(response => console.log(response)).catch(err => console.log(err));
+                setSuccess(true); 
+                document.location.href='/success';        
             },
             onError: (err) => {
                 console.log(err);
             }
         }).render(paypal.current)
-    }, [])
+    }, []);
 
-    return (
-        <div>
-            <div ref={paypal}></div>
-        </div>
-    )
-}
+    return (             
+        <div className ='paypal' ref={paypal}></div>          
+        
+)}
 
 export default PayPal;

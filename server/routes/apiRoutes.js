@@ -3,7 +3,7 @@ const { Appointment } = require('../models');
 
 router.route('/')
     .get((req, res) => {
-        Appointment.find({})
+        Appointment.find({}).sort({date:'ascending'}).sort({time: 'ascending'})
             .then(apps => {
                 res.json(apps);
             })
