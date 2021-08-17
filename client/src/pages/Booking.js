@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 
@@ -22,17 +22,26 @@ function Booking() {
         }
         console.log(reqBody);
     }
+
+    const [checkout, setCheckout] = useState(false);
     
   return (
-    <form className='Booking-form'>
-        <label htmlFor='Name'>Name:</label>
-        <input name='Name' type='text' id='name'/>
-        <label htmlFor='Email'>Email:</label>
-        <input name='Email' type='email' id='email'/>
-        <label htmlFor='Phone'>Phone:</label>
-        <input name='Phone' type='phone' id='phone'/>
-        <button type='button' onClick={formSubmit}>Checkout</button>
-    </form>
+      <div>
+          {checkout ? (
+              <PayPal />
+          ) :(
+                <form className='Booking-form'>
+                    <label htmlFor='Name'>Name:</label>
+                    <input name='Name' type='text' id='name'/>
+                    <label htmlFor='Email'>Email:</label>
+                    <input name='Email' type='email' id='email'/>
+                    <label htmlFor='Phone'>Phone:</label>
+                    <input name='Phone' type='phone' id='phone'/>
+                    <button type='button' onClick={formSubmit}>Checkout</button>
+                </form>
+          )}
+      </div>
+        
   );
 }
 
