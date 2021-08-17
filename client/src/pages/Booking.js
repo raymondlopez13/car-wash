@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import PayPal from '../components/PayPal';
 
 
@@ -9,28 +8,26 @@ function Booking() {
     time = time.replace('am', '');
     time = time.replace('pm', '');
     let date = urlParams.split('&')[1].split('=')[1];
-
     function formSubmit() {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
-        const reqBody = {
+        setReqBody({
             name: name,
             email: email,
             phone: phone,
             date: date,
             time: Number(time)
-        }
-        console.log(reqBody);
+        });
         setCheckout(true);
     }
-
     const [checkout, setCheckout] = useState(false);
+    const [reqBody, setReqBody] = useState({});
     
   return (
       <div>
           {checkout ? (
-              <PayPal />
+              <PayPal reqBody={reqBody}/>
           ) :(
                 <form className='Booking-form'>
                     <label htmlFor='Name'>Name:</label>
