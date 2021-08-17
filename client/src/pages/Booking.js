@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import PayPal from '../components/PayPal';
 
 
 function Booking() {
@@ -21,6 +22,7 @@ function Booking() {
             time: Number(time)
         }
         console.log(reqBody);
+        setCheckout(true);
     }
 
     const [checkout, setCheckout] = useState(false);
