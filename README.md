@@ -13,7 +13,3 @@ The owner of the store can see all their appointments going to /admin. The owner
     * Express
     * PayPal API
     * Axios
-
-## License
-
-**MIT https://choosealicense.com/licenses/mit/**
