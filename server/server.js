@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -16,6 +16,17 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", 
              "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
+});
+
+// Serve up static assets
+app.use('/images', express.static(path.join(__dirname, '../client/images')));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/car-wash', {
