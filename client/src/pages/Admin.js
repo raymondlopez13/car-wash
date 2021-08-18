@@ -27,6 +27,7 @@ function Admin() {
                 <tr>
                     <th>Name</th>
                     <th>Phone</th>
+                    <th>Address</th>
                     <th>Time</th>
                     <th>Date</th>
                     <th>Delete</th>

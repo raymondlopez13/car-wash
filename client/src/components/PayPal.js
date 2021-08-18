@@ -36,7 +36,7 @@ function PayPal(props) {
                 console.log(err);
             }
         }).render(paypal.current)
-    }, []);
+    });
 
     return (             
         <div className ='paypal' ref={paypal}></div>          

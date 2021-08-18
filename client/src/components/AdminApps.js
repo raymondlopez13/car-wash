@@ -14,6 +14,7 @@ function AdminApps(props) {
         <tr className='Admin-app-times-container'>
             <th>{app.name}</th>
             <th>{app.phone}</th>
+            <th>{app.address}</th>
             <th>{app.time}</th>
             <th>{app.date}</th>
             <button type='button' onClick={deleteApp}>delete</button>
