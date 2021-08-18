@@ -7,6 +7,7 @@ import './about.css';
 import './grid.css';
 import './appointment.css';
 import './booking.css';
+import './success.css';
 
 
 ReactDOM.render(

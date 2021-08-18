@@ -27,7 +27,7 @@ function Booking() {
     const [reqBody, setReqBody] = useState({});
     
   return (
-      <div>
+      <div className='Booking-container'>
           {checkout ? (
               <PayPal reqBody={reqBody}/>
           ) :(
@@ -40,7 +40,7 @@ function Booking() {
                     <input name='Phone' type='phone' id='phone'/>
                     <label htmlFor='Address'>Address:</label>
                     <input name='Address' type='text' id='address' />
-                    <button type='button' onClick={formSubmit}>Checkout</button>
+                    <button type='button' onClick={formSubmit} className='Checkout-btn'>Checkout</button>
                 </form>
           )}
       </div>
