@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: `http://localhost:3001/api`
+    baseURL: `https://carwashyeah.herokuapp.com/api/`
   });
 
 function PayPal(props) {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import AdminApps from '../components/AdminApps';
 
 const api = axios.create({
-    baseURL: `http://localhost:3001/api`
+    baseURL: `https://carwashyeah.herokuapp.com/api/`
   });
 
 function Admin() {

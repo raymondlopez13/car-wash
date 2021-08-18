@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import AppointmentTimes from '../components/AppointmentTimes';
 
 const api = axios.create({
-  baseURL: `http://localhost:3001/api`
+  baseURL: `https://carwashyeah.herokuapp.com/api/`
 });
 
 function Appointment() {

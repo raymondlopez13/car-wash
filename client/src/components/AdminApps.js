@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: `http://localhost:3001/api`
+    baseURL: `https://carwashyeah.herokuapp.com/api/`
   });
 function AdminApps(props) {
     const app = props.props;
