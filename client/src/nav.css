@@ -1,18 +1,41 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: Risque, serif;
 }
 nav {
     text-align: center;
     margin: 0;
-    background-image: linear-gradient(to right, black, rgb(0, 0, 0), gray);
+    background-color: #c4c4c4;
+    color:#283747;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .Nav-heading{
     padding: 10px;
-    margin: 0;
+    margin: 0 auto 0 0;
     font-size: 3em;
+
 }
 .Nav-heading a {
     text-decoration: none;
-    color: white;
+    color:#283747;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 0 25px;
+    font-size: 25px;
+}
+nav ul li {
+    list-style-type: none;
+    border-left: 1px solid black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    margin: auto 0px auto auto;
+    align-items: center;
+    height: 100%;
 }

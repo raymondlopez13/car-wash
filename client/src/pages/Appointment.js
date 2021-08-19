@@ -3,12 +3,17 @@ import axios from 'axios';
 import Calender from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import AppointmentTimes from '../components/AppointmentTimes';
+import { useStoreContext } from '../utils/GlobalState';
 
+// const api = axios.create({
+//   baseURL: `https://carwashyeah.herokuapp.com/api/`
+// });
 const api = axios.create({
-  baseURL: `https://carwashyeah.herokuapp.com/api/`
+  baseURL: `http://localhost:3001/api/`
 });
 
 function Appointment() {
+  const [state, dispatch] = useStoreContext();
   // set min and max dates
   const maxDate = new Date();
   maxDate.setMonth(maxDate.getMonth() + 2);
@@ -41,7 +46,6 @@ function Appointment() {
       setAppTimes(appointmentTimes);
     });
   }, [value]);
-  console.log(value);
   //disables weekends
   const disabledDates = [7, 5, 6];
   function tileDisabled({ date, view }) {
@@ -67,6 +71,7 @@ function Appointment() {
         tileDisabled = {tileDisabled}
       />
       <AppointmentTimes props={appTimes} month={value.getMonth()} date={value.getDate()} year={value.getFullYear()}/>
+      {state.appointmentType}
     </div>
   );
 }

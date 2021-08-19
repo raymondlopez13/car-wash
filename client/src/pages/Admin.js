@@ -2,9 +2,12 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import AdminApps from '../components/AdminApps';
 
+// const api = axios.create({
+//     baseURL: `https://carwashyeah.herokuapp.com/api/`
+//   });
 const api = axios.create({
-    baseURL: `https://carwashyeah.herokuapp.com/api/`
-  });
+    baseURL: `https://localhost:3001/api/`
+});
 
 function Admin() {
     const [apps, setApps] = useState([]);
