@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Calender from 'react-calendar';
 import AppointmentTimeButtons from './AppointmentTimeButtons';
 import axios from 'axios';
+import { useStoreContext } from '../utils/GlobalState';
+import { UPDATE_APPOINTMENT_DATE } from '../utils/actions';
 
 const api = axios.create({
   baseURL: `http://localhost:3001/api/`
 });
 function AppointmentTimes() {
+  // global state
+  const [ state, dispatch ] = useStoreContext();
   // set min and max dates
   let maxDate = new Date();
   maxDate.setMonth(maxDate.getMonth() + 2);
@@ -66,18 +70,14 @@ function AppointmentTimes() {
         const date = value.getDate();
         const year = value.getFullYear();
         const fullDate = `${month}/${date}/${year}`;
-        //localStorage.setItem('date', fullDate);
+        dispatch({
+          type: UPDATE_APPOINTMENT_DATE,
+          date: fullDate
+        })
         setValue(undefined);
       });
-    }
-
-    const appTime = localStorage.getItem('appTime');
-    console.log(appTime);
-    if(appTime === String) {
-      setDetailForm(true);
-    }
-    
-  });
+    } 
+  }, [value, dispatch]);
 
   return (
     <div>

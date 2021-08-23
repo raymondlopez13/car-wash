@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
+import { useStoreContext } from '../utils/GlobalState';
+import { UPDATE_APPOINTMENT_TIME, UPDATE_APPOINTMENT_TYPE } from '../utils/actions';
+ 
 function AppointmentTimes({ props }) {
+  //global state
+  const [ state, dispatch ] = useStoreContext(); 
   //initial appointment time
   const [ appTime, setTime ] = useState('');
   // checks if there are any times
@@ -20,9 +24,13 @@ function AppointmentTimes({ props }) {
       let appointmentTime = appTime;
       appointmentTime = appointmentTime.replace('am', '');
       appointmentTime = appointmentTime.replace('pm', '');
-      //localStorage.setItem('appTime', appointmentTime);
+      dispatch({
+        type: UPDATE_APPOINTMENT_TIME,
+        time: appointmentTime
+      })
     }
-  }, [appTime]);
+    console.log(state);
+  }, [appTime, dispatch]);
 
   return (
     <div>
