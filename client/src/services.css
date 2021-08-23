@@ -1,0 +1,24 @@
+.bg h1 {
+    margin: 0px;
+    font-size: 50px;
+    padding: 30px 0px;
+}
+.bg h2 {
+    font-size: 38px;
+}
+.bg {
+    text-align: center;
+    color: #283747;
+}
+.bg p {
+    margin: 0px 40px;
+    font-size: 30px;
+}
+.services-btn {
+    font-size: 30px;
+    padding: 15px 35px;
+    margin: 15px auto;
+}
+.detail {
+    padding-bottom: 40px;
+}

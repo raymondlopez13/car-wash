@@ -7,12 +7,10 @@ import Contact from './pages/Contact';
 import Success from './pages/Success';
 import Admin from './pages/Admin';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { StoreProvider } from './utils/GlobalState';
 
 function App() {
   return (
-    <Router>
-      <StoreProvider>
+    <Router> 
         <Nav />
         <Switch>
             <Route exact path='/' component={Home} />
@@ -22,9 +20,6 @@ function App() {
             <Route exact path='/success' component={Success} />
             <Route exact path='/admin' component={Admin} />
           </Switch>
-      </StoreProvider>
-      
-      
     </Router>
   );
 }

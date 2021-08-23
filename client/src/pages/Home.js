@@ -4,7 +4,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="grid">
+    <div className="bg">
       Home
     </div>
   );

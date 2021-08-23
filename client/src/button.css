@@ -1,16 +1,14 @@
 button {
-    background-color: rgb(142, 142, 200);
+    background-color: #c4c4c4;
     border: none;
     padding: 8px;
+    color: #283747;
+    border: 5px solid #283747;
+    font-family: Risque, serif;
 }
-.Book-btn-container {
-    text-align: center;
-    margin: 15px;
+button:disabled {
+    background-color: #283747;
 }
-.Book-btn {
-    font-size: 35px;
-}
-.Book-btn a {
-    text-decoration: none;
-    color: white;
+button:active {
+    background-color: #5c80a7;
 }
