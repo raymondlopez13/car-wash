@@ -5,12 +5,12 @@ import axios from 'axios';
 //     baseURL: `https://carwashyeah.herokuapp.com/api/`
 //   });
 const api = axios.create({
-    baseURL: `https://localhost:3001/api/`
+    baseURL: `http://localhost:3001/api/`
 });
 function AdminApps(props) {
     const app = props.props;
     function deleteApp() {
-        api.delete(`/${app._id}`).then(appointment => console.log('deleted'));
+        api.delete(`/${app._id}`).then(appointment => console.log('deleted')).catch(err => console.log(err));
         window.location.reload();
     }
     return (
