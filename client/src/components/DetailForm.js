@@ -21,15 +21,15 @@ function DetailForm() {
   }
   return (
     <form onSubmit={submit}>
-        <label htmlFor='name' >Name</label>
+        <label htmlFor='name' >Name: </label>
         <input type='text' name='name' id='name' required/>
-        <label htmlFor='email'>Email</label>
+        <label htmlFor='email'>Email: </label>
         <input type='email' name='email' id='email' required/>
-        <label htmlFor='phone'>Phone</label>
+        <label htmlFor='phone'>Phone: </label>
         <input type='text' name='phone' id='phone' required/>
-        <label htmlFor='address' >Address</label>
+        <label htmlFor='address' >Address: </label>
         <input type='text' name='address' id='address' required/>
-        <button type='submit'>Checkout</button>
+        <button type='submit' className='checkout-btn'>Checkout</button>
     </form>
   );
 }

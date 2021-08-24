@@ -38,6 +38,9 @@ nav ul {
     align-items: center;
     height: 100%;
 }
+nav ul li a:visited {
+    color: #283747;
+}
 @media screen and (max-height: 768px) {
     nav {
         display: flex;

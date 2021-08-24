@@ -26,7 +26,7 @@ function Admin() {
         {loading ? (
             <h1>Loading...</h1>
         ) : (
-            <table>
+            <table className='bg'>
                 <tr>
                     <th>Name</th>
                     <th>Phone</th>

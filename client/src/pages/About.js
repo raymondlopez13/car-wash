@@ -5,8 +5,8 @@ import React from 'react';
 function About() {
   
   return (
-    <div>
-        About
+    <div className='bg'>
+        <h1>Coming Soon</h1>
     </div>
   );
 }

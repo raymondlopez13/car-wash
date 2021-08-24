@@ -10,6 +10,7 @@ import './booking.css';
 import './success.css';
 import './services.css';
 import './home.css';
+import './admin.css';
 
 
 ReactDOM.render(

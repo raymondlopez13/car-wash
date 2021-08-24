@@ -12,8 +12,8 @@ function Home() {
       </div>
 
       <div  className='row-grid'>
+        <h2 className='SA'>Check our services tab to book your appointment!</h2>
         <FiSettings size="200px" className='icon icon2'/>
-        <h2>Check our services tab to book your appointment!</h2>
       </div>
     </div>
   );

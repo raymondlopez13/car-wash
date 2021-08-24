@@ -35,7 +35,7 @@ function AppointmentTimes({ props }) {
   return (
     <div>
       {times.map(time => (
-        <button type='button' key={time} id={time} onClick={() => setTime(time)}>{time}</button>
+        <button type='button' key={time} id={time} onClick={() => setTime(time)} className='app-time-btn'>{time}</button>
       ))}
     </div>
   );
