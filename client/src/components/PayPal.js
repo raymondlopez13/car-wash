@@ -1,14 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+import { useStoreContext } from '../utils/GlobalState';
+import { CLEAR_VALS } from '../utils/actions';
 
 const api = axios.create({
-    baseURL: `https://carwashyeah.herokuapp.com/api/`
+    //baseURL: `https://carwashyeah.herokuapp.com/api/`
+    baseURL: `http://localhost:3001/api/`
   });
 
-function PayPal(props) {
+function PayPal() {
+    const [ state, dispatch ] = useStoreContext();
+    let price = 80.00;
+    if(state.appointmentType === 'advanced') {
+        price = 200.00;
+    }
     const [success, setSuccess] = useState(false);
     const paypal = useRef()
-    console.log(props.reqBody);
     useEffect(() => {
         window.paypal.Buttons({
             createOrder: (data, actions, err) => {
@@ -19,7 +26,7 @@ function PayPal(props) {
                             description: 'Car detail',
                             amount: {
                                 currency_code: "USD",
-                                value: 80.00
+                                value: price
                             }
                         }
                     ]
@@ -28,8 +35,11 @@ function PayPal(props) {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
                 console.log(order);
-                api.post('/', props.reqBody).then(response => console.log(response)).catch(err => console.log(err));
+                api.post('/', state).then(response => console.log(response)).catch(err => console.log(err));
                 setSuccess(true); 
+                dispatch({
+                    type: CLEAR_VALS
+                });
                 document.location.href='/success';        
             },
             onError: (err) => {

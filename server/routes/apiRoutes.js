@@ -11,18 +11,13 @@ router.route('/')
                 res.json(error);
             })
     })
-    .post((req,res) => {
-        Appointment.find(req.body).then(app => {
-            if(!app[0]) {
-                Appointment.create(req.body).then(data => {
-                    res.json(data);
-                })
-            } else {
-                res.json(app);
-            }
-        });
-        
+    .post((req,res) => {    
+        Appointment.create(req.body).then(data => {
+            res.json(data);
+        })
+            
     });
+
 router.route('/:id')
     .delete((req,res) => {
         Appointment.findByIdAndDelete(req.params.id)

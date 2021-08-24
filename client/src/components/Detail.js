@@ -3,6 +3,7 @@ import AppointmentTimes from './Calender';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_APPOINTMENT_TYPE } from '../utils/actions';
 import DetailForm from './DetailForm';
+import PayPal from './PayPal';
 
 
 function Detail() {
@@ -37,6 +38,9 @@ function Detail() {
                 {(calender === 'basic' && state.time.length > 0) &&
                     <DetailForm />
                 }
+                {(calender === 'basic' && state.time.length > 0 && state.name.length > 0) &&
+                    <PayPal />
+                }
             </div>
 
             <div className="detail">
@@ -48,6 +52,9 @@ function Detail() {
                 }
                 {(calender === 'advanced' && state.time.length > 0) &&
                     <DetailForm />
+                }
+                {(calender === 'advanced' && state.time.length > 0 && state.name.length > 0) &&
+                    <PayPal />
                 }
             </div>
             

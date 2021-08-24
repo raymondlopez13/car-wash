@@ -1,7 +1,9 @@
 import {
+    CLEAR_VALS,
     UPDATE_APPOINTMENT_DATE,
     UPDATE_APPOINTMENT_TIME,
-    UPDATE_APPOINTMENT_TYPE
+    UPDATE_APPOINTMENT_TYPE,
+    UPDATE_FORM_VALS
 } from './actions';
 import { useReducer } from 'react';
 
@@ -36,6 +38,24 @@ export const reducer = (state = {
             return {
                 ...state,
                 date: action.date
+            }
+        case UPDATE_FORM_VALS:
+            return {
+                ...state,
+                name: action.name,
+                email: action.email,
+                phone: action.phone,
+                address: action.address
+            }
+        case CLEAR_VALS:
+            return {
+                name: '',
+                email: '',
+                phone: '',
+                address: '',
+                appointmentType: '',
+                time: '',
+                date: ''
             }
         default:
             return state;
