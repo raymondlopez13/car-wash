@@ -10,8 +10,8 @@ const api = axios.create({
 function AdminApps(props) {
     const app = props.props;
     function deleteApp() {
-        api.delete(`/${app._id}`).then(appointment => console.log('deleted')).catch(err => console.log(err));
-        window.location.reload();
+        api.delete(`/${app._id}`).then(appointment => window.location.reload()).catch(err => console.log(err));
+        
     }
     return (
         <tr className='Admin-app-times-container'>
