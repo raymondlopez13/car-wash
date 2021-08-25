@@ -25,9 +25,10 @@
 .react-calendar {
     background-color: white;
     border: 5px solid white;
-    width: 80%;
-    margin: auto;
-    font-size: 30px;
+    width: 100% !important;
+    max-width: 1024px;
+    margin: auto auto;
+    font-size: 25px;
 }
 .react-calendar__tile {
     font-size: 20px;

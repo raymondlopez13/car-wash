@@ -11,6 +11,7 @@ import './success.css';
 import './services.css';
 import './home.css';
 import './admin.css';
+import 'react-calendar/dist/Calendar.css';
 
 
 ReactDOM.render(
