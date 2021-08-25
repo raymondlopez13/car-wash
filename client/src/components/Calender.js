@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Calender from 'react-calendar';
+import Calendar from 'react-calendar';
 import AppointmentTimeButtons from './AppointmentTimeButtons';
 import axios from 'axios';
 import { useStoreContext } from '../utils/GlobalState';
@@ -86,7 +86,7 @@ function AppointmentTimes() {
         <div></div>
       ) : (
         <div>
-            <Calender 
+            <Calendar 
               maxDate={maxDate}
               minDate={minDate}
               showNeighboringMonth={false}
