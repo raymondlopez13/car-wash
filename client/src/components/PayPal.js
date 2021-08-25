@@ -35,12 +35,16 @@ function PayPal() {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
                 console.log(order);
-                api.post('/', state).then(response => console.log(response)).catch(err => console.log(err));
-                setSuccess(true); 
-                dispatch({
-                    type: CLEAR_VALS
-                });
-                document.location.href='/success';        
+                api.post('/', state)
+                    .then(response => {
+                        setSuccess(true); 
+                        dispatch({
+                            type: CLEAR_VALS
+                        });
+                        document.location.href='/success';
+                    })
+                    .catch(err => console.log(err));
+                        
             },
             onError: (err) => {
                 console.log(err);
