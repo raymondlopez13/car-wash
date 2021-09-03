@@ -20,7 +20,13 @@ function DetailForm() {
     });
   }
   return (
-    <form onSubmit={submit}>
+    <div className='animate__animated animate__fadeInDown'>
+      <h2>Appointment for {state.date} at {state.time}{Number(state.time) > 7  && Number(state.time) < 12? (
+        'am'
+      ):(
+        'pm'
+      )}</h2>
+      <form onSubmit={submit}>
         <label htmlFor='name' >Name: </label>
         <input type='text' name='name' id='name' required/>
         <label htmlFor='email'>Email: </label>
@@ -30,7 +36,9 @@ function DetailForm() {
         <label htmlFor='address' >Address: </label>
         <input type='text' name='address' id='address' required/>
         <button type='submit' className='checkout-btn'>Checkout</button>
-    </form>
+      </form>
+    </div>
+    
   );
 }
 

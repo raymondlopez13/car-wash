@@ -12,6 +12,7 @@ import './services.css';
 import './home.css';
 import './admin.css';
 import 'react-calendar/dist/Calendar.css';
+import 'animate.css';
 
 
 ReactDOM.render(

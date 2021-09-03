@@ -10,9 +10,9 @@ const api = axios.create({
 
 function PayPal() {
     const [ state, dispatch ] = useStoreContext();
-    let price = 80.00;
+    let price = 100.00;
     if(state.appointmentType === 'advanced') {
-        price = 200.00;
+        price = 125.00;
     }
     const [success, setSuccess] = useState(false);
     const paypal = useRef()
@@ -53,7 +53,7 @@ function PayPal() {
     });
 
     return (             
-        <div className ='paypal' ref={paypal}></div>          
+        <div className ='paypal animate__animated animate__fadeInDown' ref={paypal}></div>          
         
 )}
 
