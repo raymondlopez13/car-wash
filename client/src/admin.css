@@ -2,13 +2,13 @@ th {
     margin: auto 10px;
     font-size: 30px;
     padding: 0px 20px;
+    border: 2px solid #283747;
 }
 tr {
-    margin: 10px 5px;
-    border-bottom: 2px solid #283747;
+    margin: 0px;
 }
 tr button {
-    font-size: 20px;
+    font-size: 30px;
 }
 caption {
     color: #283747;
@@ -16,4 +16,5 @@ caption {
 }
 table {
     padding-bottom: 30px !important;
+    border-bottom: 5px solid #283747;
 }

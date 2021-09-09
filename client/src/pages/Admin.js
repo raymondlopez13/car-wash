@@ -40,7 +40,7 @@ function Admin() {
                             <th>Address</th>
                             <th>Time</th>
                             <th>Date</th>
-                            <th>Delete</th>
+                            <th>Confirm</th>
                         </tr>
                         {newApps.map(appointment => (
                             <AdminApps props={appointment} />

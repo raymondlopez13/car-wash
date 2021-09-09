@@ -24,9 +24,9 @@ function AdminApps(props) {
             <th>{app.time}</th>
             <th>{app.date}</th>
             {app.newAppointment ? (
-                <button type='button' onClick={confirmApp}>confirm</button>
+                <th><button type='button' onClick={confirmApp}>confirm</button></th>
             ) : (
-                <button type='button' onClick={deleteApp}>delete</button>
+                <th><button type='button' onClick={deleteApp}>delete</button></th>
             )}
         </tr>
     );
