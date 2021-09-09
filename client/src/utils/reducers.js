@@ -15,7 +15,8 @@ export const reducer = (state = {
             address: '',
             date: '',
             time: '',
-            appointmentType: ''
+            appointmentType: '',
+            newAppointment: ''
         }, action) => {
     switch (action.type) {
         case UPDATE_APPOINTMENT_TIME:
@@ -32,7 +33,8 @@ export const reducer = (state = {
                 phone: action.phone,
                 address: action.address,
                 date: action.date,
-                time: action.time
+                time: action.time,
+                newAppointment: true
             };
         case UPDATE_APPOINTMENT_DATE:
             return {

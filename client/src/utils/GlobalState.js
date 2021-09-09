@@ -11,7 +11,8 @@ const StoreProvider = ({value = [], ...props}) => {
         phone: '',
         date: '',
         appointmentType: '',
-        time: ''
+        time: '',
+        newAppointment: ''
     });
     return <Provider value={[state, dispatch]} {...props} />
 }

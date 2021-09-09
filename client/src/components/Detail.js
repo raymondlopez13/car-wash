@@ -24,7 +24,7 @@ function Detail() {
                 address: ''
             });
         } 
-    }, [calender])
+    }, [calender, dispatch])
 
     return (
         <div>

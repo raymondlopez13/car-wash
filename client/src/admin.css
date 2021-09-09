@@ -10,3 +10,10 @@ tr {
 tr button {
     font-size: 20px;
 }
+caption {
+    color: #283747;
+    background-color: white;
+}
+table {
+    padding-bottom: 30px !important;
+}

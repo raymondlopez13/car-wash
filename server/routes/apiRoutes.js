@@ -3,7 +3,7 @@ const { Appointment } = require('../models');
 
 router.route('/')
     .get((req, res) => {
-        Appointment.find({}).sort({date:'ascending'}).sort({time: 'ascending'})
+        Appointment.find({}).sort({newAppointment: 'descending'}).sort({date:'ascending'}).sort({time: 'ascending'})
             .then(apps => {
                 res.json(apps);
             })
@@ -19,6 +19,15 @@ router.route('/')
     });
 
 router.route('/:id')
+    .put((req,res) => {
+        Appointment.findByIdAndUpdate(req.params.id, req.body)
+            .then(app => {
+                res.json(app);
+            })
+            .catch(err => {
+                res.json(err);
+            });
+    })
     .delete((req,res) => {
         Appointment.findByIdAndDelete(req.params.id)
             .then(app => {

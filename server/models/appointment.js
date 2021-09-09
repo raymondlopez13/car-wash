@@ -33,6 +33,10 @@ const appointmentSchema = new Schema(
         appointmentType: {
             type: String,
             required: true
+        },
+        newAppointment: {
+            type: Boolean,
+            required: true
         }
 });
 
