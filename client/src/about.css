@@ -16,3 +16,10 @@
 .insta-container {
     text-align: center;
 }
+.contact-info {
+    font-size: 35px;
+}
+.contact-div {
+    display: flex;
+    justify-content: space-evenly;
+}
