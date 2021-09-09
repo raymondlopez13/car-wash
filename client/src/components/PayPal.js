@@ -4,8 +4,8 @@ import { useStoreContext } from '../utils/GlobalState';
 import { CLEAR_VALS } from '../utils/actions';
 
 const api = axios.create({
-    // baseURL: `https://carwashyeah.herokuapp.com/api/`
-    baseURL: `http://localhost:3001/api/`
+    baseURL: `https://carwashyeah.herokuapp.com/api/`
+    // baseURL: `http://localhost:3001/api/`
   });
 
 function PayPal() {

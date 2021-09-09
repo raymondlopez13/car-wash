@@ -6,8 +6,8 @@ import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_APPOINTMENT_DATE } from '../utils/actions';
 
 const api = axios.create({
-  baseURL: `http://localhost:3001/api/`
-  // baseURL: `https://carwashyeah.herokuapp.com/api/`
+  // baseURL: `http://localhost:3001/api/`
+  baseURL: `https://carwashyeah.herokuapp.com/api/`
 });
 function AppointmentTimes() {
   // global state

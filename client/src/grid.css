@@ -1,6 +1,13 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
 @media screen and (min-width: 769px) {
     body {
         background-color: #283747;
+        position: relative;
+        min-height: 100vh;
     }
     .bg {
         background-color: white;

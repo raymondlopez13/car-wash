@@ -41,6 +41,14 @@ nav ul {
 nav ul li a:visited {
     color: #283747;
 }
+.footer {
+    background-color: #c4c4c4;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+}
 @media screen and (max-height: 768px) {
     nav {
         display: flex;
