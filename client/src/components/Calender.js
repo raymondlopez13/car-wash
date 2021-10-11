@@ -9,7 +9,7 @@ const api = axios.create({
   // baseURL: `http://localhost:3001/api/`
   baseURL: `https://carwashyeah.herokuapp.com/api/`
 });
-function AppointmentTimes() {
+function AppointmentTimes(props) {
   // global state
   const [ state, dispatch ] = useStoreContext();
   // set min and max dates
@@ -79,13 +79,14 @@ function AppointmentTimes() {
       });
     } 
   }, [value, dispatch]);
-
+  console.log(props);
   return (
     <div>
       {detailForm ? (
         <div></div>
       ) : (
         <div>
+          <h2>{props.props}</h2>
             <Calendar 
               maxDate={maxDate}
               minDate={minDate}
