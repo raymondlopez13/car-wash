@@ -6,8 +6,7 @@ body, html {
 nav {
     text-align: center;
     margin: 0;
-    background-color: #c4c4c4;
-    color:#283747;
+    background-color: #283747;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -15,41 +14,41 @@ nav {
     padding: 10px;
     margin: 0 auto 0 0;
     font-size: 3em;
+    margin: 0px auto;
 }
 .Nav-heading a {
     text-decoration: none;
-    color:#283747;
+    color:#eeeeee;
 }
 nav ul li a{
     text-decoration: none;
     padding: 0 25px;
-    font-size: 35px;
+    font-size: 2em;
 }
 nav ul li {
     list-style-type: none;
-    border-left: 1px solid black;
     height: 100%;
     display: flex;
     align-items: center;
 }
 nav ul {
     display: flex;
-    margin: auto 0px auto auto;
+    margin: auto auto;
     align-items: center;
     height: 100%;
 }
 nav ul li a:visited {
-    color: #283747;
+    color: #eeeeee;
 }
 .footer {
-    background-color: #c4c4c4;
+    background-color: #eeeeee;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
     height: fit-content;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
     nav {
         display: flex;
         flex-direction: column;
@@ -75,6 +74,7 @@ nav ul li a:visited {
         padding-left: 0%;
     }
     nav ul li a {
-        font-size: 1.25em;
+        font-size: 1.5em;
+        padding: 1rem;
     }
 }

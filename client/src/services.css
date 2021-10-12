@@ -1,3 +1,19 @@
+.animate-delay-halfS {
+    animation-delay: .5s;
+}
+.animate-delay-1S {
+    animation-delay: 1s;
+}
+.animate-delay-1quarterS {
+    animation-delay: 1.25s;
+}
+.animate-delay-1halfS {
+    animation-delay: 1.5s;
+}
+.animate-delay-1threequarterS {
+    animation-delay: 1.75s;
+}
+
 .bg h1 {
     margin: 0px;
     font-size: 50px;
@@ -12,7 +28,7 @@
 }
 .bg p {
     margin: 0px 40px;
-    font-size: 30px;
+    font-size: 2em;
 }
 .services-btn {
     font-size: 30px;
@@ -78,7 +94,7 @@ label {
     }
     .bg p {
         margin: 0px 20px;
-        font-size: 20px;
+        font-size: 1,5em;
     }
     .app-time-btn {
         font-size: 20px;

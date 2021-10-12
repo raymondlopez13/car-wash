@@ -20,22 +20,25 @@ function DetailForm() {
     });
   }
   return (
-    <div className='animate__animated animate__fadeInDown'>
-      <h2>Appointment for {state.date} at {state.time}{Number(state.time) > 7  && Number(state.time) < 12? (
-        'am'
-      ):(
-        'pm'
-      )}</h2>
+    <div className=''>
+      <div className='appointmentDetails'>
+        <h2 className='animate__animated animate__fadeInDown'>Date: {state.date}</h2>
+        <h2 className='animate__animated animate__fadeInDown animate-delay-halfS'>Time: {state.time}{Number(state.time) > 7  && Number(state.time) < 12? (
+          'am'
+        ):(
+          'pm'
+        )}</h2>
+      </div>
       <form onSubmit={submit}>
-        <label htmlFor='name' >Name: </label>
-        <input type='text' name='name' id='name' required/>
-        <label htmlFor='email'>Email: </label>
-        <input type='email' name='email' id='email' required/>
-        <label htmlFor='phone'>Phone: </label>
-        <input type='text' name='phone' id='phone' required/>
-        <label htmlFor='address' >Address: </label>
-        <input type='text' name='address' id='address' required/>
-        <button type='submit' className='checkout-btn'>Checkout</button>
+        <label htmlFor='name' className='animate__animated animate__bounceInLeft animate-delay-1S'>Name: </label>
+        <input type='text' name='name' id='name' required className='animate__animated animate__bounceInRight animate-delay-1S'/>
+        <label htmlFor='email'  className='animate__animated animate__bounceInLeft animate-delay-1quarterS'>Email: </label>
+        <input type='email' name='email' id='email' required className='animate__animated animate__bounceInRight animate-delay-1quarterS'/>
+        <label htmlFor='phone'  className='animate__animated animate__bounceInLeft animate-delay-1halfS'>Phone: </label>
+        <input type='text' name='phone' id='phone' required className='animate__animated animate__bounceInRight animate-delay-1halfS'/>
+        <label htmlFor='address'  className='animate__animated animate__bounceInLeft animate-delay-1threequarterS'>Address: </label>
+        <input type='text' name='address' id='address' required className='animate__animated animate__bounceInRight animate-delay-1threequarterS'/>
+        <button type='submit' className='checkout-btn animate__animated animate__fadeInDown animate__delay-2s'>Checkout</button>
       </form>
     </div>
     

@@ -33,10 +33,10 @@ function AppointmentTimes({ props }) {
   }, [appTime, dispatch]);
 
   return (
-    <div className='animate__animated animate__fadeInDown'>
-      <h2>Appointment times for: {state.date}</h2>
+    <div>
+      <h2 className='animate__animated animate__fadeInDown'>Appointment times for: {state.date}</h2>
       {times.map(time => (
-        <button type='button' key={time} id={time} onClick={() => setTime(time)} className='app-time-btn'>{time}</button>
+        <button type='button' key={time} id={time} onClick={() => setTime(time)} className='app-time-btn animate__animated animate__fadeInDown animate-delay-halfS'>{time}</button>
       ))}
     </div>
   );
