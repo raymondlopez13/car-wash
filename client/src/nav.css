@@ -24,6 +24,7 @@ nav ul li a{
     text-decoration: none;
     padding: 0 25px;
     font-size: 2em;
+    color: #eeeeee;
 }
 nav ul li {
     list-style-type: none;
@@ -37,7 +38,7 @@ nav ul {
     align-items: center;
     height: 100%;
 }
-nav ul li a:visited {
+nav ul li a:visited{
     color: #eeeeee;
 }
 .footer {
