@@ -3,9 +3,8 @@ button {
     border: none;
     padding: 8px;
     color: #283747;
-    border: 5px solid #283747;
+    border: 2px solid #283747;
     font-family: Risque, serif;
-    border-radius: 15%;
 }
 button:disabled {
     background-color: #283747;

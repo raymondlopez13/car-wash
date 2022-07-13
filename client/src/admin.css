@@ -12,13 +12,16 @@ tr button {
 }
 caption {
     color: #283747;
-    background-color: white;
 }
 table {
     padding-bottom: 30px !important;
     border-bottom: 5px solid #283747;
+    margin: auto auto;
 }
 .logout {
     font-size: 35px;
     margin: 10px auto;
+}
+.admin-table {
+    text-align: center;
 }

@@ -93,7 +93,7 @@ function AppointmentTimes(props) {
               showNeighboringMonth={false}
               tileDisabled={tileDisabled}
               onChange={onChange}
-              className='animate__animated animate__fadeInDown'
+              className=''
             />
             {state.date !== '' && 
               <AppointmentTimeButtons props={appTimes}/>

@@ -44,7 +44,7 @@ function Admin() {
     }, [])
     
   return (
-    <div>
+    <div className='admin-table'>
         {loading ? (
             <h1>Loading...</h1>
         ) : (
@@ -52,7 +52,7 @@ function Admin() {
                 {loggedIn ? (
                     <div>
                         {newApps.length > 0 ? (
-                            <table className='bg newApps'>
+                            <table className='newApps'>
                                 <caption><h2>New Appointments</h2></caption>
                                 <tr>
                                     <th>Name</th>
@@ -67,9 +67,9 @@ function Admin() {
                                 ))}
                             </table>
                         ) : (
-                            <h1 className='bg'>No new appointments</h1>
+                            <h1 className=''>No new appointments</h1>
                         )}
-                        <table className='bg'>
+                        <table className=''>
                             <caption><h2>Current Appointments</h2></caption>
                         <tr>
                             <th>Name</th>
@@ -83,10 +83,10 @@ function Admin() {
                             <AdminApps props={appointment} />
                         ))}
                         </table>
-                        <div className='bg'><button type='button' onClick={logout} className='logout'>Log Out</button></div>
+                        <div className=''><button type='button' onClick={logout} className='logout'>Log Out</button></div>
                     </div>
                 ) : (
-                    <form className='bg'>
+                    <form className=''>
                         <label>Password:</label>
                         <input type='text' id='password'/>
                         <button type='button' onClick={login} className='logout'>Login</button>

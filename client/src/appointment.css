@@ -3,9 +3,10 @@
     margin: 10px auto;
 }
 
-.App-time-btn {
+.app-time-btn {
     font-size:  35px;
     margin-top: 30px;
+    width: 75% !important;
 }
 .App-times-container {
     display: flex;
@@ -15,4 +16,10 @@
 .App-time-btn a {
     text-decoration: none;
     color: white;
+}
+@media screen and (min-width: 768px) {
+    .appointmentDetails {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

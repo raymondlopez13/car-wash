@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
@@ -24,7 +23,6 @@ function App() {
             <Route exact path='/admin' component={Admin} />
           </Switch>
       </StoreProvider>
-      <Footer />
     </Router>
   );
 }
